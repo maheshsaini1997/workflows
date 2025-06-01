@@ -17,15 +17,12 @@ runs:
 
     - name: Install dependencies
       run: npm install
-      shell: bash
 
     - name: Run tests
       run: npm test || echo "Tests failed, but continuing..."
-      shell: bash
 
     - name: Print Environment Info
       run: |
         echo "Running in ${{ inputs.environment }} environment"
         echo "User is ${{ github.actor }}"
         echo "Repository: ${{ github.repository }}"
-      shell: bash
