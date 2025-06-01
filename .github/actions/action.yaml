@@ -1,0 +1,16 @@
+name: "Environment Setup Composite Action"
+description: "Sets up Node, installs deps, runs tests, prints env info"
+
+inputs:
+  environment:
+    description: "Deployment environment"
+    required: true
+    default: "dev"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Node.js 16
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
