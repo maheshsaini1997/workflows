@@ -1,17 +1,6 @@
 name: Test Environment Setup
 on:
     workflow_dispatch:
-        # inputs:
-        #     environment:
-        #         description: "Deployment environment"
-        #         required: true
-        #         default: "dev"
-        #         type: choice
-        #         options:
-        #             - dev
-        #             - test
-        #             - uat
-        #             - production
 jobs:
     build:
         runs-on: "ubuntu-latest"
